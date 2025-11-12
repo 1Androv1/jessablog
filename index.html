@@ -211,39 +211,78 @@
     </div>
   </section>
 
-  <section id="contacto">
-    <div class="container">
-      <div class="section__hd">
-        <h2 class="section__title">Contacto & Representación</h2>
-      </div>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
-  <!-- Requerido por Netlify para identificar el formulario -->
-  <input type="hidden" name="form-name" value="contact">
-  <!-- Opcional: asunto en el email -->
-  <input type="hidden" name="subject" value="Nuevo contacto desde el dossier actoral">
-
-  <!-- Honeypot anti-spam (oculto) -->
-  <p style="display:none">
-    <label>No llenar: <input name="bot-field"></label>
-  </p>
-
-  <label>
-    <span>Nombre</span>
-    <input name="name" required placeholder="Nombre y apellido" />
-  </label>
-  <label>
-    <span>Correo</span>
-    <input type="email" name="email" required placeholder="tucorreo@ejemplo.com" />
-  </label>
-  <label>
-    <span>Mensaje</span>
-    <textarea name="message" rows="5" placeholder="Cuéntame sobre el proyecto…" required></textarea>
-  </label>
-  <button class="btn btn--primary" type="submit">Enviar mensaje</button>
-</form>
-
+<section id="contacto">
+  <div class="container">
+    <div class="section__hd">
+      <h2 class="section__title">Contacto & Representación</h2>
     </div>
-  </section>
+
+    <!-- Tarjeta de representación “todo en uno” -->
+    <div class="contact">
+      <aside class="reveal" style="grid-column: 1 / -1;">
+        <div class="rep-card rep-card--wide">
+          <div class="rep-card__border"></div>
+
+          <header class="rep-card__hd">
+            <!-- Cambia por tu foto si quieres -->
+            <!-- <img class="rep-avatar" src="img/tu-foto.jpg" alt="Jessica Olivares" /> -->
+            <div class="rep-avatar" aria-hidden="true">JO</div>
+            <div class="rep-txt">
+              <strong>Representación</strong>
+              <small>Contacto directo</small>
+            </div>
+          </header>
+
+          <div class="rep-body">
+            <div class="rep-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/></svg>
+              <span>Jessica Olivares</span>
+            </div>
+
+            <div class="rep-grid">
+              <a class="rep-chip" href="tel:+573213598044" title="Llamar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.8 21 3 13.2 3 4a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6.12.35.04.74-.25 1.02L6.6 10.8z"/></svg>
+                +57 321 359 8044
+              </a>
+
+              <a class="rep-chip" href="mailto:jessicaolivaresyanez1898@gmail.com?subject=Contacto%20dossier%20actoral&body=Hola%20Jessica%2C%20me%20gustar%C3%ADa%20contactarte%20para..." title="Enviar correo">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v.4l10 6.25L22 6.4V6a2 2 0 0 0-2-2zm0 4.15-8 5-8-5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.15z"/></svg>
+                jessicaolivaresyanez1898@gmail.com
+              </a>
+
+              <button class="rep-chip rep-chip--ghost" id="copyEmail" type="button" title="Copiar email">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14h13a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
+                Copiar email
+              </button>
+
+              <a class="rep-chip rep-chip--wa" target="_blank" rel="noopener"
+                 href="https://wa.me/573213598044?text=Hola%20Jessica%2C%20vi%20tu%20dossier%20actoral%20y%20quisiera%20contactarte%20para%20un%20proyecto."
+                 title="WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163A10.93 10.93 0 0 1 0 10.94C0 4.897 4.897 0 10.94 0S21.88 4.897 21.88 10.94c0 6.042-4.897 10.94-10.94 10.94-1.93 0-3.748-.502-5.374-1.45L.057 24zm6.597-3.807c1.61.955 3.223 1.43 5.226 1.43 5.448 0 9.877-4.43 9.877-9.877S17.328 1.87 11.88 1.87 2.003 6.3 2.003 11.748c0 2.005.536 3.51 1.497 5.11l-.986 3.62 3.64-.986zM7.62 6.704c.155-.352.318-.36.467-.366.121-.005.259-.006.398-.006.138 0 .362.052.552.26.19.207.654.64.654 1.56 0 .919-.669 1.806-.763 1.93-.095.121-1.31 2.074-3.17 2.825-.444.184-.79.294-1.06.375-.44.14-.84.12-1.155.073-.353-.052-1.086-.444-1.24-.873-.155-.43-.155-.8-.108-.873.043-.069.173-.112.362-.19.19-.077 1.21-.578 1.4-.644.19-.068.327-.103.467.052.138.155.54.63.678.759.138.129.241.19.431.034.19-.155.78-.454 1.48-1.157.699-.703.98-1.3 1.116-1.523.137-.224.016-.345-.1-.5-.112-.155-.241-.362-.362-.612-.121-.25-.006-.464.05-.64z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+
+            <div class="rep-actions">
+              <a class="btn btn--primary rep-btn" href="img/flayer1.jpg" download="CV-Jessica-Olivares.jpg">Descargar CV</a>
+              <!-- Si usas Calendly u otro, cambia el href -->
+              <a class="btn btn--ghost rep-btn" href="mailto:jessicaolivaresyanez1898@gmail.com?subject=Reuni%C3%B3n%20-%20Dossier%20actoral">Agendar contacto</a>
+            </div>
+
+            <div class="rep-social">
+              <a class="rep-social__link" href="https://www.instagram.com/imjessicaolivares?igsh=N3BsNDdzcWtiOGZy" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm4.25 4.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm6 .75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/></svg>
+              </a>
+              <a class="rep-social__link" href="https://www.linkedin.com/in/jessica-olivares-9392a0306" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.6v-5.4c0-1.29-.02-2.95-1.8-2.95-1.81 0-2.09 1.42-2.09 2.86v5.49H9.35V9h3.46v1.56h.05c.48-.9 1.66-1.85 3.41-1.85 3.64 0 4.31 2.4 4.31 5.52v6.22zM5.34 7.43a2.09 2.09 0 1 1 0-4.18 2.09 2.09 0 0 1 0 4.18zM3.54 20.45h3.6V9h-3.6v11.45z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
 
   <footer>
     <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap">
@@ -481,36 +520,52 @@ document.querySelectorAll('.thumb').forEach(t => {
     openModal(url);
   });
 });
+// Copiar email con fallback robusto
+(function(){
+  const btn = document.getElementById('copyEmail');
+  if(!btn) return;
+  const email = btn.dataset.email || 'jessicaolivaresyanez1898@gmail.com';
+
+  // Toast reutilizable
+  let toast = document.getElementById('toastCopy');
+  if(!toast){
+    toast = document.createElement('div');
+    toast.id = 'toastCopy';
+    toast.className = 'toast';
+    toast.textContent = 'Email copiado';
+    document.body.appendChild(toast);
+  }
+  const showToast = (msg='Email copiado')=>{
+    toast.textContent = msg;
+    toast.classList.add('is-show');
+    setTimeout(()=> toast.classList.remove('is-show'), 1400);
+  };
+
+  btn.addEventListener('click', async () => {
+    // 1) Intento moderno (HTTPS o localhost)
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(email);
+        showToast();
+        return;
+      } catch {}
+    }
+    // 2) Fallback (execCommand)
+    try{
+      const ta = document.createElement('textarea');
+      ta.value = email; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+      showToast();
+      return;
+    }catch{}
+    // 3) Último recurso: prompt
+    const ok = window.prompt('Copia el email (Ctrl/Cmd+C) y Aceptar:', email);
+    if (ok !== null) showToast('Listo');
+  });
+})();
 
 </script>
-<script>
-    (() => {
-    const form = document.querySelector('form[name="contact"]');
-    if(!form) return;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const data = new FormData(form);
-        if(!data.get('form-name')) data.append('form-name', 'contact');
-
-        try {
-        const res = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams([...data]).toString()
-        });
-        if (res.ok) {
-            alert('¡Gracias! Tu mensaje fue enviado.');
-            form.reset();
-        } else {
-            alert('Ocurrió un error al enviar. Inténtalo de nuevo.');
-        }
-        } catch {
-        alert('No se pudo enviar en este momento. Inténtalo más tarde.');
-        }
-    });
-    })();
-</script>
-
 </body>
 </html>
