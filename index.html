@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dossier Actoral – Portafolio</title>
+  <meta name="description" content="Actriz de TV, cine y teatro. Dossier actoral, showreel, hoja de vida artística, contacto y prensa." />
+  <meta property="og:title" content="Dossier Actoral – Portafolio" />
+  <meta property="og:description" content="TV, cine y teatro. Disponible para proyectos a nivel internacional." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="nav" aria-label="Principal">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" role="img">
+          <circle cx="32" cy="32" r="31" stroke="url(#g)" opacity=".6"/>
+          <path d="M32 10l4.8 10.4 11.6 1.2-8.5 7.9 2.2 11.3L32 35l-10.1 5.8 2.2-11.3-8.5-7.9 11.6-1.2L32 10z" fill="url(#g)" opacity=".9"/>
+          <defs><linearGradient id="g" x1="0" x2="64" y1="0" y2="64"><stop stop-color="#d7b490"/><stop offset="1" stop-color="#b06b37"/></linearGradient></defs>
+        </svg>
+        <span>Actriz</span>
+      </a>
+      <nav class="nav__links" aria-label="Secciones">
+        <a class="nav__link" href="#sobre-mi">Sobre mí</a>
+        <a class="nav__link" href="#showreel">Showreel</a>
+        <a class="nav__link" href="#teatro">Teatro</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO a pantalla completa con foto de fondo -->
+  <main id="top"
+        class="hero hero--bg hero--full"
+        style="--hero-img:url('img/50d1a6e2-9b7e-482e-9c77-9c1747b37141.jpg'); --hero-pos-x:70%; --hero-pos-y:50%;">
+    <div class="container hero__grid">
+      <div>
+        <div class="eyebrow">Dossier actoral</div>
+        <h1>Actriz</h1>
+        <p class="lead">
+          Disponible para proyectos internacionales. Entrenamiento en actuación orgánica, cuerpo y voz; dominio de cámara y escena.
+          Experiencia en énfasis dramático.
+        </p>
+        <div class="ctas">
+          <a class="btn btn--primary" href="#showreel" id="openReel">
+            <span>▸</span> Video&nbsp;Gallery
+          </a>
+          <a class="btn btn--ghost" href="#contacto">Contactar</a>
+        </div>
+        <div class="kpis" aria-label="Métricas">
+          <div class="kpi"><span class="num counter" data-target="4">0</span><small>años de formación</small></div>
+          <div class="kpi"><span class="num counter" data-target="4">0</span><small>obras y rodajes</small></div>
+        </div>
+      </div>
+      <!-- Visible en móvil; oculto en desktop por CSS -->
+      <figure class="portrait" aria-label="Retrato">
+        <img src="img/50d1a6e2-9b7e-482e-9c77-9c1747b37141.jpg" alt="Retrato artístico." loading="eager" />
+      </figure>
+    </div>
+  </main>
+
+  <section id="sobre-mi">
+    <div class="container">
+      <div class="section__hd">
+        <h2 class="section__title">Sobre mí</h2>
+        <span class="tag">Disponible para casting</span>
+      </div>
+      <div class="about">
+        <div>
+          <p class="reveal">
+            Actriz formada en Arte Dramático de la
+            <a href="https://www.unbosque.edu.co/" style="color:green" target="_blank">Universidad el Bosque.</a>
+            Trabajo desde la acción física, la escucha y la precisión del gesto. Exploro personajes de psicología
+            compleja y universos con atmósferas densas y poéticas.
+          </p>
+          <p class="reveal">
+            Consolido procesos desde la investigación: Stanislavski, Viewpoints y Suzuki; entrenamiento vocal; creación
+            de partituras corporales para escena; y adaptación frente a cámara con enfoque naturalista.
+          </p>
+        </div>
+        <div class="card reveal">
+          <strong>Rangos e idiomas</strong>
+          <hr class="rule" />
+          <ul>
+            <li>Rangos: 18–30 | Drama, thriller, comedia, etc.</li>
+            <li>Idiomas: Español nativo · Inglés avanzado.</li>
+            <li>Altura 1,59 · Tesitura de mezzosoprano.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="showreel">
+    <div class="container">
+        <div class="section__hd">
+            <h2 class="section__title">Showreel</h2>
+            <a class="btn btn--ghost" href="#" id="openModal">Ver en pantalla completa</a>
+        </div>
+        <div class="reel">
+            <div class="thumb reveal" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1">
+            <img src="img/foto1.jpg" alt="Clip 1"/>
+            <span>Drama</span>
+            </div>
+            <div class="thumb reveal" data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1">
+            <img src="img/foto2.jpg" alt="Clip 2"/>
+            <span>Monólogo</span>
+            </div>
+            <!-- 👇 Aquí el cambio -->
+            <div class="thumb reveal" data-video="https://www.youtube.com/embed/Ub-mCxW6VQw?autoplay=1">
+            <img src="img/foto3.jpg" alt="Clip 3"/>
+            <span>Comedia</span>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="teatro">
+    <div class="container">
+      <div class="section__hd">
+        <h2 class="section__title">Teatro</h2>
+      </div>
+
+      <!-- Créditos -->
+      <div class="credits">
+        <div class="list">
+          <div class="credit reveal">
+            <span>
+              <strong>Kantan, la almohada mágica</strong> ·
+              <a class="ig-pop"
+                 href="https://www.instagram.com/cesarlmfigueroa"
+                 target="_blank" rel="noopener"
+                 data-ig-name="César Morales"
+                 data-ig-user="@cesarlmfigueroa"
+                 data-ig-image="">
+                 Dir. César Morales
+              </a>
+            </span>
+            <small>2025 · Trivial</small>
+          </div>
+
+          <div class="credit reveal">
+            <span>
+              <strong>Los 39 Escalones.</strong> ·
+              <a class="ig-pop"
+                 href="https://www.instagram.com/javierriverosdiago"
+                 target="_blank" rel="noopener"
+                 data-ig-name="Javier Riveros"
+                 data-ig-user="@javierriverosdiago"
+                 data-ig-image="">
+                 Dir. Javier Riveros
+              </a>
+            </span>
+            <small>2025 · Payaso</small>
+          </div>
+
+          <div class="list">
+          <div class="credit reveal">
+            <span>
+              <strong>El principio de Arquímedes</strong> ·
+              <a class="ig-pop"
+                 href="https://www.instagram.com/carlosgr_ig"
+                 target="_blank" rel="noopener"
+                 data-ig-name="Carlos García Ruiz"
+                 data-ig-user="@carlosgr_ig"
+                 data-ig-image="">
+                 Dir. Luisa Acuña
+              </a>
+            </span>
+            <small>2025 · Asistente Dir</small>
+          </div>
+        </div>
+
+          <div class="credit reveal">
+            <span>
+              <strong>Goliardos</strong> ·
+              <a class="ig-pop"
+                 href="https://www.instagram.com/carlosgr_ig"
+                 target="_blank" rel="noopener"
+                 data-ig-name="Carlos García Ruiz"
+                 data-ig-user="@carlosgr_ig"
+                 data-ig-image="">
+                 Dir. Carlos García Ruiz
+              </a>
+            </span>
+            <small>2024 · Davinia</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Afiches / Flyers -->
+      <div class="section__hd" style="margin-top:1.2rem">
+        <h3 class="section__subtitle">Afiches</h3>
+        <span class="tag">Carteles de obra</span>
+      </div>
+
+      <div class="posters">
+        <a class="poster reveal" href="img/flayer1.jpg" data-caption="Kantan, la almohada mágica">
+          <img src="img/flayer1.jpg" alt="Afiche: Kantan, la almohada mágica" loading="lazy">
+        </a>
+        <a class="poster reveal" href="img/flayer2.jpg" data-caption="Los 39 Escalones">
+          <img src="img/flayer2.jpg" alt="Afiche: Los 39 Escalones" loading="lazy">
+        </a>
+        <a class="poster reveal" href="img/flayer3.jpg" data-caption="El principio de Arquímedes">
+          <img src="img/flayer3.jpg" alt="Afiche: El principio de Arquímedes" loading="lazy">
+        </a>
+        <a class="poster reveal" href="img/flayer4.jpg" data-caption="Goliard@s">
+          <img src="img/flayer4.jpg" alt="Afiche: Goliard@s" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="section__hd">
+        <h2 class="section__title">Contacto & Representación</h2>
+      </div>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+  <!-- Requerido por Netlify para identificar el formulario -->
+  <input type="hidden" name="form-name" value="contact">
+  <!-- Opcional: asunto en el email -->
+  <input type="hidden" name="subject" value="Nuevo contacto desde el dossier actoral">
+
+  <!-- Honeypot anti-spam (oculto) -->
+  <p style="display:none">
+    <label>No llenar: <input name="bot-field"></label>
+  </p>
+
+  <label>
+    <span>Nombre</span>
+    <input name="name" required placeholder="Nombre y apellido" />
+  </label>
+  <label>
+    <span>Correo</span>
+    <input type="email" name="email" required placeholder="tucorreo@ejemplo.com" />
+  </label>
+  <label>
+    <span>Mensaje</span>
+    <textarea name="message" rows="5" placeholder="Cuéntame sobre el proyecto…" required></textarea>
+  </label>
+  <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+</form>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap">
+      <small>© <span id="year"></span> Dossier actoral · Todos los derechos reservados</small>
+      <small>Diseño & código: personalizado para portafolio</small>
+    </div>
+  </footer>
+
+  <!-- Modal Video -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Reproductor de video">
+    <div class="modal__dialog">
+      <div class="modal__hd">
+        <strong>Showreel</strong>
+        <button class="close" id="closeModal" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="modal__body">
+        <iframe id="modalFrame" width="100%" height="100%" src="" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox afiches -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Vista de afiche">
+    <img id="lightboxImg" alt="">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <div class="lightbox__caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- Popover IG (reutilizable) -->
+  <div id="igPopover" class="popover" role="dialog" aria-hidden="true"></div>
+
+  <button id="toTop" class="btn btn--ghost" style="position:fixed; right:1rem; bottom:1rem; opacity:0; transform:translateY(10px); transition:.3s; z-index:40" aria-label="Ir arriba">↑</button>
+
+  <script>
+    // Año
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav compacta + botón subir
+    const nav = document.querySelector('.nav');
+    const toTop = document.getElementById('toTop');
+    const onScroll = () => {
+      const y = window.scrollY;
+      nav.classList.toggle('is-scrolled', y > 8);
+      toTop.style.opacity = y > 700 ? 1 : 0;
+      toTop.style.transform = y > 700 ? 'none' : 'translateY(10px)';
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Smooth scroll con offset
+    document.querySelectorAll('a[href^="#"]').forEach(a =>{
+      a.addEventListener('click', e =>{
+        const id = a.getAttribute('href');
+        if(id.length > 1){
+          e.preventDefault();
+          const el = document.querySelector(id);
+          if(el){
+            const y = el.getBoundingClientRect().top + window.scrollY - (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) - 10);
+            window.scrollTo({top:y, behavior:'smooth'});
+          }
+        }
+      })
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry =>{
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      })
+    },{threshold:.14});
+    revealEls.forEach(el=> io.observe(el));
+
+    // Contadores
+    const counters = document.querySelectorAll('.counter');
+    const io2 = new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting){
+          const el = ent.target; const target = +el.dataset.target; let n = 0; const step = Math.ceil(target/60);
+          const tick = ()=>{ n += step; if(n>target) n = target; el.textContent = n + (target<12?'':'+'); if(n<target) requestAnimationFrame(tick) };
+          requestAnimationFrame(tick); io2.unobserve(el);
+        }
+      })
+    }, {threshold:.6});
+    counters.forEach(c=> io2.observe(c));
+
+    // Modal de video
+    const modal = document.getElementById('modal');
+    const frame = document.getElementById('modalFrame');
+    const openModal = (src) => { frame.src = src; modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+    const closeModal = () => { frame.src = ''; modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+    document.getElementById('openModal').addEventListener('click', (e)=>{ e.preventDefault(); openModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'); });
+    document.getElementById('openReel').addEventListener('click', (e)=>{ e.preventDefault(); document.querySelector('#showreel').scrollIntoView({behavior:'smooth'}); });
+    document.querySelectorAll('.thumb').forEach(t=> t.addEventListener('click', ()=> openModal(t.dataset.video)));
+
+    // Parallax del hero (omitir si reduce motion)
+    (function(){
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced) return;
+      const hero = document.querySelector('.hero--bg');
+      if(!hero) return;
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY * 0.06;
+          hero.style.setProperty('--hero-shift', `${y}px`);
+          ticking = false;
+        });
+        ticking = true;
+      }, {passive:true});
+    })();
+
+    // Popover Instagram
+    (function(){
+      const links = document.querySelectorAll('a.ig-pop');
+      if(!links.length) return;
+      const pop = document.getElementById('igPopover');
+
+      function setContent(a){
+        const name = a.dataset.igName || 'Instagram';
+        const handle = a.dataset.igUser || guessHandle(a.getAttribute('href'));
+        const img = a.dataset.igImage || '';
+        const href = a.getAttribute('href');
+        pop.innerHTML = `
+          <div class="row">
+            ${img ? `<img class="avatar" src="${img}" alt="">` : ''}
+            <div><div class="name">${name}</div><div class="handle">${handle}</div></div>
+          </div>
+          ${img ? `<div class="preview"><img src="${img}" alt=""></div>` : ''}
+          <div class="actions"><span>Perfil en Instagram</span>
+            <a class="btn-mini btn-mini--primary" href="${href}" target="_blank" rel="noopener">Abrir</a></div>`;
+      }
+      function guessHandle(href){
+        try{
+          const u = new URL(href);
+          const user = (u.pathname.split('/').filter(Boolean)[0] || '').replace('@','');
+          return user ? '@'+user : '@instagram';
+        }catch{ return '@instagram'; }
+      }
+      function position(a){
+        const r = a.getBoundingClientRect();
+        const top  = r.top + window.scrollY - 12;
+        const left = r.left + r.width/2 + window.scrollX;
+        pop.style.top  = `${top}px`;
+        pop.style.left = `${left}px`;
+      }
+      let hideTimer, current;
+      function open(a){ clearTimeout(hideTimer); current=a; setContent(a); position(a);
+        pop.classList.add('is-visible'); pop.setAttribute('aria-hidden','false'); }
+      function scheduleClose(){ hideTimer = setTimeout(close, 140); }
+      function close(){ pop.classList.remove('is-visible'); pop.setAttribute('aria-hidden','true'); current=null; }
+
+      links.forEach(a=>{
+        a.addEventListener('mouseenter', ()=>open(a));
+        a.addEventListener('focus', ()=>open(a));
+        a.addEventListener('mouseleave', scheduleClose);
+        a.addEventListener('blur', close);
+      });
+      pop.addEventListener('mouseenter', ()=> clearTimeout(hideTimer));
+      pop.addEventListener('mouseleave', scheduleClose);
+      window.addEventListener('scroll', ()=> current && position(current), {passive:true});
+      window.addEventListener('resize', ()=> current && position(current));
+      document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
+    })();
+
+    // Lightbox afiches
+    (function(){
+      const posters = document.querySelectorAll('.posters .poster');
+      if(!posters.length) return;
+
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      const lbCaption = document.getElementById('lightboxCaption');
+      const lbClose = document.getElementById('lightboxClose');
+
+      function openLightbox(src, caption){
+        lbImg.src = src;
+        lbCaption.textContent = caption || '';
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox(){
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden','true');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+      }
+
+      posters.forEach(p=>{
+        p.addEventListener('click', e=>{
+          e.preventDefault();
+          openLightbox(p.getAttribute('href'), p.dataset.caption || p.querySelector('img')?.alt);
+        });
+      });
+
+      lb.addEventListener('click', (e)=>{ if(e.target === lb) closeLightbox(); });
+      lbClose.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
+    })();
+
+    function toEmbedUrl(url) {
+  try {
+    const u = new URL(url);
+    // youtu.be/<id>
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.slice(1);
+      const qs = u.search; // conserva ?si=... por si lo necesitas
+      return `https://www.youtube.com/embed/${id}`;
+    }
+    // youtube.com/watch?v=<id>
+    if (u.pathname === '/watch' && u.searchParams.get('v')) {
+      return `https://www.youtube.com/embed/${u.searchParams.get('v')}`;
+    }
+    // youtube.com/shorts/<id>
+    if (u.pathname.startsWith('/shorts/')) {
+      return `https://www.youtube.com/embed/${u.pathname.split('/')[2]}`;
+    }
+    // ya es /embed/
+    if (u.pathname.startsWith('/embed/')) return url;
+  } catch {}
+  return url;
+}
+
+// Usa la conversión al abrir el modal
+document.querySelectorAll('.thumb').forEach(t => {
+  t.addEventListener('click', () => {
+    const raw = t.dataset.video;
+    const embed = toEmbedUrl(raw);
+    // añade autoplay si quieres
+    const url = embed.includes('?') ? `${embed}&autoplay=1` : `${embed}?autoplay=1`;
+    openModal(url);
+  });
+});
+
+</script>
+<script>
+    (() => {
+    const form = document.querySelector('form[name="contact"]');
+    if(!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        if(!data.get('form-name')) data.append('form-name', 'contact');
+
+        try {
+        const res = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams([...data]).toString()
+        });
+        if (res.ok) {
+            alert('¡Gracias! Tu mensaje fue enviado.');
+            form.reset();
+        } else {
+            alert('Ocurrió un error al enviar. Inténtalo de nuevo.');
+        }
+        } catch {
+        alert('No se pudo enviar en este momento. Inténtalo más tarde.');
+        }
+    });
+    })();
+</script>
+
+</body>
+</html>
